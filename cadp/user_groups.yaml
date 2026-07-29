@@ -1,0 +1,18 @@
+user_groups:
+  - name: pii_access
+    api_scopes:
+      - meta
+      - data
+      - graphql
+      - jobs
+      - source
+    includes: "*"
+  - name: opp_restricted
+    api_scopes:
+      - meta
+      - data
+      - graphql
+      - jobs
+      - source
+    includes:
+      - users:id:useridmanpreetsingh
