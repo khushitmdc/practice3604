@@ -20,7 +20,7 @@ tables:
           func: redact
           user_groups:
             includes:
-              - opp_restricted
+              - pii_access
       - name: leidos_tcv_amount_in_dollar
         type: string
         column: leidos_tcv_amount_in_dollar
