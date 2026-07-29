@@ -16,11 +16,7 @@ tables:
         column: agency
         description: The government agency associated with the opportunity.
         public: true
-        secure:
-          func: redact
-          user_groups:
-            includes:
-              - pii_access
+        secure: null
       - name: leidos_tcv_amount_in_dollar
         type: string
         column: leidos_tcv_amount_in_dollar
