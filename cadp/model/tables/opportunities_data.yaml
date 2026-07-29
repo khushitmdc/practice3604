@@ -28,7 +28,7 @@ tables:
         public: true
       - name: rfi_due_date
         type: time
-        column: ""
+        column: rfi_due_date
         description: Request for Information due date.
         public: true
     measures:
