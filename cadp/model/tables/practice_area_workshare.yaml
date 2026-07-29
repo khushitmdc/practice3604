@@ -4,5 +4,16 @@ tables:
     sql: {{ load_sql('practice_area_workshare') }}
     description: Semantic view for practice_area_workshare.
     public: true
-    dimensions: []
+    dimensions:
+      - name: id
+        type: string
+        column: id
+        description: The unique identifier for the practice area workshare record.
+        public: true
+        primary_key: true
+      - name: practice_area_name
+        type: string
+        column: practice_area_name
+        description: The name of the practice area involved in the workshare.
+        public: true
     measures: []
