@@ -2,7 +2,7 @@ WITH cte AS (
     SELECT
         *,
         DATE_DIFF('month', rfi_release_date, current_timestamp) AS month_diff  -- FIXED!
-    FROM "icebase"."opportunity_central"."opportunities_data"
+    FROM "icebase"."builderuploads"."opportunities_data"
 ),
 cte2 AS (
     SELECT *,
