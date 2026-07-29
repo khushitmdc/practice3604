@@ -22,8 +22,8 @@ tables:
         description: The date when the activity record was created.
         public: true
     measures:
-      - name: id
+      - name: total_activities
         type: count_distinct
-        sql: "{TABLE.total_activities}"
+        sql: "{TABLE.id}"
         description: total activities for opportuniyties
         public: true
