@@ -1,0 +1,33 @@
+name: practice-area-workshare-quality
+version: v1
+type: workflow
+tags:
+  - Quality
+description: Data quality checks for opportunities-data
+workspace: public
+workflow:
+  dag:
+    - name: practice-area-workshare-quality
+      title: practice-area-workshare Quality Assertion
+      description: Data quality checks for opportunities-data
+      spec:
+        stack: soda+python:1.0
+        logLevel: INFO
+        compute: runnable-default
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 250Mi
+          limits:
+            cpu: 1000m
+            memory: 250Mi
+        stackSpec:
+          inputs:
+            - dataset: dataos://icebase:builderuploads/practice_area_workshare
+              options:
+                engine: minerva
+                clusterName: builder
+              checks:
+                - missing_count(id) = 0:
+                    attributes:
+                      category: Completeness
