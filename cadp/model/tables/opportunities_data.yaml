@@ -26,4 +26,14 @@ tables:
         column: ""
         description: Request for Information due date.
         public: true
-    measures: []
+    measures:
+      - name: total_opportunities
+        type: count_distinct
+        sql: "{TABLE.id}"
+        description: Total number of opportunities.
+        public: true
+      - name: total_tcv_amount
+        type: sum
+        sql: "{TABLE.leidos_tcv_amount_in_dollar}"
+        description: Total summed contract value amount in dollars.
+        public: true
