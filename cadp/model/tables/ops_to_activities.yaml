@@ -1,0 +1,8 @@
+tables:
+  - name: ops_to_activities
+    title: ops_to_activities
+    sql: {{ load_sql('ops_to_activities') }}
+    description: Semantic view for ops_to_activities.
+    public: true
+    dimensions: []
+    measures: []

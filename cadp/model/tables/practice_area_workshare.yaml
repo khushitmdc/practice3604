@@ -1,0 +1,8 @@
+tables:
+  - name: practice_area_workshare
+    title: practice_area_workshare
+    sql: {{ load_sql('practice_area_workshare') }}
+    description: Semantic view for practice_area_workshare.
+    public: true
+    dimensions: []
+    measures: []
